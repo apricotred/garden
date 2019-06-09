@@ -79,5 +79,23 @@ module.exports = {
         })
       }
     }
+  },
+  // 环境变量
+  env: {
+    TEST: false,
+    DB_OPT: { // 数据库配置
+      TEST: {
+        // 暂无测试环境
+      },
+      PROD: {
+        URI: 'mongodb://www.iimt.me/apricot',
+        OPT: {
+          useNewUrlParser: true,
+          user: 'root',
+          pass: 'apricotRED'
+        }
+      }
+    },
+    baseURL: 'http://localhost'
   }
 }
